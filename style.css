@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: brown;
+}
+
+.container {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid brown;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.container .timer {
+    /* background-color: aqua; */
+    height: 400px;
+    width: 400px;
+    position: relative;
+}
+
+.container .timer .c-outer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: lightblue;
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+}
+
+.container .timer .c-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: beige;
+    height: 270px;
+    width: 270px;
+    border-radius: 100%;
+}
+
+.container .timer .c-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    /* background-color: white; */
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+}
+
+.container .timer .c-middle .left {
+    background-color: brown;
+    height: 300px;
+    width: 150px;
+    border-radius: 200px 0 0 200px;
+    transform-origin: right center;
+    /* transform: rotate(-45deg); */
+    z-index: 3;
+    /* opacity: 0; */
+}
+
+.container .timer .c-middle .screen {
+    background-color: lightblue;
+    height: 300px;
+    width: 150px;
+    border-radius: 200px 0 0 200px;
+    transform-origin: left center;
+    /* transform: rotate(-50deg); */
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container .timer .c-middle .right {
+    background-color: brown;
+    height: 300px;
+    width: 150px;
+    border-radius: 0 200px 200px 0;
+    transform-origin: left center;
+    /* transform: rotate(-50deg); */
+    z-index: 1;
+}
+
+.container .timer .time {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    font-size: 50px;
+    text-align: center;
+    color: brown;
+}
+
+.container .controls {
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.container .controls button {
+    background-color: beige;
+    border: 5px solid brown;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+    color: brown;
+}
